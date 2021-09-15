@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/upload-style.css' %}">
+  <title>upload</title>
+</head>
+
+<body>
+
+    <header>
+      <div class="back-btn">
+        <a href="#">
+          <img src="{% static 'image/back.png' %}">
+        </a>
+      </div>
+      <div class="h1box">
+      <h1>새 게시물</h1>
+      </div>
+      
+      <div class="upload-btn">
+        <a href="#">등록</a>
+      </div>
+    </header> 
+
+    <section>
+      <form action="동물이름란">
+      <div class="insert-name">
+        <input type="text"placeholder="이름" class="name-box">
+      </div>
+      </form>
+    </section>
+
+
+
+    <div class="insert-contents">
+      <div class="content-picture">
+
+      <div class="upload-btnp">
+        <a href="#">업로드</a>
+      </div>
+      </div>
+
+      <div class="text-control"> 
+        <input type="text"placeholder="내용을입력해주세요"class="content-text">
+      </div>
+      <!-- 수정필요 -->
+    </div>
+
+    <div class="animaltype">
+      <form action="동물종 입력">
+      <textarea name="animal" id="type"placeholder="동물종 입력"></textarea>
+      </form>
+    </div>
+   
+
+
+  <div class="select-place">
+    <div class="location">
+      <form action="동물 체크박스">
+      <label for="animals"class="animals">동물종 선택</label>
+      <select name="animal" id="animal">
+        <option value="cat">고양이</option>
+        <option value="dog">강아지</option>
+        <option value="etc1">유해종</option>
+        <option value="etc2">희귀종</option>
+      </select>
+     </form>
+    </div>
+   </div>
+
+</body>
+</html>

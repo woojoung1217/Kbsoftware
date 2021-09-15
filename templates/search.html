@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+  <title>Search</title>
+</head>
+<body>
+  <!-- 메인 컨테이너 시작 -->
+  <div id="mainWrapper">
+    <!-- 상단 검색 영역 시작 -->
+    <div id="header">
+      <div class="btn-area">
+        <a href="{% url 'main' %}">
+          <span>
+            <img id="leftArrow" src="{% static 'image/left-arrow.png' %}" alt="이전 페이지">
+          </span>
+        </a>
+      </div>
+      <div class="input-area">
+        <input class="input-box-search" type="text" placeholder="검색어를 입력하세요.">
+      </div>
+    </div>
+    <!-- 상단 검색 영역 끝 -->
+    <!-- 하단 추천 영역 시작 -->
+    <div id="mainContainer">
+      <!-- 인기 검색어 시작 -->
+      <div id="hotTopicArea">
+        <p class="top-title">인기 검색어</p>
+        <div class="hot-topic-cnotent">
+          <div class="hot-topic-element">
+            <a class="left-align">
+              <span class="place">1</span>
+              <div class="detail">고양이</div>
+            </a>
+            <span class="insert">↖</span>
+          </div>
+          <div class="hot-topic-element">
+            <a class="left-align">
+              <span class="place">2</span>
+              <div class="detail">갸라도스</div>
+            </a>
+            <span class="insert">↖</span>
+          </div>
+          <div class="hot-topic-element">
+            <a class="left-align">
+              <span class="place">3</span>
+              <div class="detail">잉어킹</div>
+            </a>
+            <span class="insert">↖</span>
+          </div>
+        </div>
+      </div>
+      <!-- 인기 검색어 끝 -->
+      <!-- 최근 글 시작 -->
+      <div id="recentUpdateArea">
+        <p class="top-title">최근 게시글</p>
+        <div class="recent-update-content">
+          <!-- 최근 글 예시 시작 -->
+          {% for post in posts %}
+          <div class="recent-post">
+            <div class="recent-post-profile-area">
+              {% if post.image %}
+              <img class="profile-img" src="{{ post.image.url }}" alt="고양이">
+              {% else %}
+              <img class="profile-img" src="{% static 'image/cat.jpg' %}" alt="고양이">
+              {% endif %}
+            </div>
+            <div class="recent-post-left-area">
+              <div class="recent-post-left-top-area">
+                <p class="animal-name">{{ post.name }}</p>
+                <p class="animal-border">|</p>
+                <p class="animal-species">{{ post.species }}</p>
+              </div>
+              <div class="recent-post-left-bottom-area">
+                <p class="hash-tag">{{ post.hash_tag }}</p>
+              </div>
+            </div>
+            <div class="recent-post-right-area">
+              <p class="location">{{ post.location }}</p>
+              <p class="writer">{{ post.name }} ></p>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- 최근 글 예시 끝 -->
+        </div>
+      </div>
+      <!-- 최근 글 끝 -->
+    </div>
+
+  </div>
+  <!-- 메인 컨테이너 끝 -->
+</body>
+</html>

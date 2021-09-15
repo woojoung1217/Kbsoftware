@@ -1,0 +1,181 @@
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom: 1.6px solid #ddd;
+}
+header .h1-control{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+header h1 {
+  font-size: 20px;
+  font-weight: 400;
+} 
+header .btn-cover {
+  width: 20%;
+  height: 30px;
+}
+header .btn-cover .back-btn{
+  background-image: url(../image/back.png);
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+}
+
+header .none {
+  width: 20%;
+  height: 30px;
+  /* 헤더 화면 정렬을 위한 태그 */
+}
+
+
+/* sub-header  */
+
+.sub-header {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.sub-header .content-text {
+  width: 20%;
+  height: 30px;
+  background-color: tomato;
+}
+
+.sub-header .content-type {
+  width: 20%;
+  height: 30px;
+  background-color: yellow;
+}
+.sub-header .content-loacation {
+  width: 50%;
+  height: 30px;
+  background-color: green;
+}
+
+
+.content-picture{
+  width: 100%;
+  height: 250px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emotion{
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.emotion .emotion-select {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+.emotion .emotion-select .like{
+  width: 20px;
+  height: 20px;
+  border:1px solid #ddd;
+  border-radius: 50px;
+  margin-right: 10px;
+  transition: 1s;
+}
+.emotion .emotion-select .like:hover{
+  background-color: bisque;
+}
+.emotion .emotion-select .hate{
+  width: 20px;
+  height: 20px;
+  border:1px solid #ddd;
+  border-radius: 50px;
+  margin-left: 10px;
+  transition: 1s;
+}
+.emotion .emotion-select .hate:hover{
+  background-color: bisque;
+}
+
+.emotion .etc {
+  width: 100%;
+  height: 50%;
+  margin-top: 10px;
+  display: flex;
+}
+.emotion .etc .etc1{
+  width: 20px;
+  height: 20px;
+  border:1px solid #ddd;
+  border-radius: 50px;
+  margin-left: 10px;
+  transition: 1s;
+}
+
+.emotion .etc .etc1:hover{
+  background-color: bisque;
+}
+.emotion .etc .textbox {
+  width: 50%;
+  height: 20px;
+  margin-left: 10px;
+  background-color: gray;
+}
+
+
+.comment-area {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#comment {
+  width: 80%;
+  height: 40px;
+  border-style: none;
+  color:#000;
+  font-size: 12px;  
+  margin-left: 20px;
+}
+
+
+.comment-area .comment-btn{
+  width: 20%;
+  height: 20px;
+  background-color: #C89D6C;
+  margin-right: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px #ddd;
+}
+
+.comment-area .comment-btn a{
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  transition: 1s;
+}

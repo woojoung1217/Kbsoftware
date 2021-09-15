@@ -1,0 +1,252 @@
+/* 
+ font : 10px
+ basic-color : #C89D6C
+ size : 375 * 667
+ */
+
+
+html{
+  font-size: 10px;
+  
+}
+
+body{
+  width: 100%;  
+  height: 100%;
+}
+
+.fullscreen{
+  z-index: 999;
+  position: relative;
+}
+
+#map{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+/* header 영역  */
+/* header => 메뉴 , 검색 기능 */
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+header .menu-btn {
+  width: 13%;
+  height:40px;
+  margin-top: 17px;
+  margin-left: 15px;
+  background-color:#fff;
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile{
+  display:none;
+  width: 80%;
+  height:700px;
+  background-color:#fff;
+  position: relative;
+  z-index: 2;
+}
+
+#profile .profile-header{
+  width: 100%;
+  height: 70px;
+  border-bottom: 5px solid #C89D6C;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+#profile .profile-header .profile-pic{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #dddd;
+  margin-right: 20px;
+  box-shadow: 1px 1px 1px #000;
+}
+#profile .profile-header h1 {
+}
+
+#profile .profile-header a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  font-weight: 700px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+
+
+#profile .profile-list{
+  width: 100%;
+  height: 200px;
+}
+
+#profile .profile-list li{
+  transition: 2s;
+}
+#profile .profile-list li > a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 17px;
+  color: #000;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#profile .profile-list li a:hover{
+  font-weight: 900;
+  border-bottom: 1px dashed #000;
+}
+
+#profile .back-btn2 {
+  width: 30px;
+  height: 30px;
+}
+#profile .back-btn2 a {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-image: url(../image/left-arrow.png);
+  background-size: 30px 22px;
+  background-position: center;
+}
+
+header .menu-btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+
+header .menu-btn a{
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-image: url(../image/menubar.png);
+  background-size: 30px 22px;
+  background-position: center;
+}
+
+
+/* header - 검색기능  */
+header .input-box {
+  width: 83%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+header .input-box .box-size{
+  width: 80%;
+  height: 30px;
+  border-radius: 13px;
+  border:1px solid #fff;
+  padding-left: 20px;
+  box-shadow: 2px 2px 2px#ddd;
+  
+}
+header .input-box .box-size:focus{
+  outline: none;
+}
+
+/* container 영역 */
+
+.container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .item {
+  width: 50px;
+  height: 20px;
+  background-color: #fff;
+  border:1px solid #fff;
+  box-shadow: 2px 2px 2px rgb(229, 231, 221);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.container .item a{
+  text-decoration: none;
+  font-size: 10px;
+  color: #000;
+  cursor: pointer;
+}
+
+.container .item:hover{
+  background-color:#C89D6C;
+  transition: 1s;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+/* footer 
+  footer => 버튼 요소 3개 
+ */
+
+ footer {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  
+  margin-top: 300px;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  position: relative;
+  z-index: 999;
+ }
+
+ footer .click{
+  width: 40px;
+  height: 40px;
+  border : 1px solid #fff;
+  border-radius: 100px  ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-right: 15px;
+  box-shadow: 2px 2px 2px #ddd;
+ }
+
+footer .click1{
+ /* 유해종사진이나 텍스트 */
+ }
+footer .click2{
+ /* 희귀종사진이나 텍스트 */
+}
+footer .click3{
+   margin-top: 60px;
+   background-color: #C89D6C;
+   background-size: contain;
+}

@@ -1,0 +1,143 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  font-family: "NanumSquareRound", sans-serif;
+}
+
+#mainWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 헤더 시작 */
+#header {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #dddddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#leftArrow {
+  width: 25px;
+  height: 25px;
+}
+
+.input-area {
+  width: 80%;
+}
+
+.input-box-search {
+  width: 95%;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #dddddd;
+}
+/* 헤더 끝 */
+
+/* 메인 시작 */
+#mainContainer {
+  width: 90%;
+}
+
+.top-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 20px 0px 10px;
+  color: #c89d6c;
+}
+
+.hot-topic-element {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 0px;
+  font-size: 1.6rem;
+}
+
+.left-align {
+  display: flex;
+}
+
+.place {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.detail {
+  font-family: "NanumSquareRound", sans-serif;
+}
+
+.recent-post {
+  width: 100%;
+  height: 50px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.recent-post > * {
+  font-family: "NanumSquareRound", sans-serif;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.recent-post-left-area {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.recent-post-left-top-area {
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.animal-name {
+  color: #c89d6c;
+}
+
+.animal-border {
+  margin: 0px 5px;
+}
+
+.animal-species {
+  color: #888888;
+}
+
+.hash-tag {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.recent-post-right-area {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.location {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.writer {
+  font-size: 1.6rem;
+}
+/* 메인 끝 */

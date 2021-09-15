@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+  <title>Detail</title>
+</head>
+<body>
+
+    <header>
+      <div class="btn-cover">
+        <div class="back-btn">
+        <!-- image -->
+        </div>
+      </div>
+      <div class="h1-control">
+        <h1>게시물</h1>
+      </div>
+      <div class="none">
+      </div>
+    </header>
+
+    <div class="sub-header">
+        <div class="content-text">
+          <p></p>
+        </div>
+        <div class="content-type">
+          <p></p>
+        </div>
+        <div class="content-loacation">
+          <p></p>
+        </div>
+    </div>
+
+    <div class="content-picture">
+      <input type="image" src="" alt="">
+      <h3>사진 넣을 공간</h3>
+    </div>
+    <!-- 좋아요 싫어요 등 -->
+    <div class="emotion">
+      <div class="emotion-select">
+        <div class="like">
+          <!-- 좋아요 버튼 -->
+        </div>
+        <div class="hate">
+          <!-- 싫어요 버튼 -->
+        </div>
+      </div>
+
+      <div class="etc">
+        <div class="etc1">
+          <!-- 아직 정하지 않은 표현 버튼 -->
+        </div>
+
+        <div class="textbox">
+           <!-- 텍스트 불러올 공간 -->
+        </div>
+      </div>
+    </div>
+      
+    <!-- 댓글 다는 공간 -->
+    <div class="comment-area">
+      <div class="input-comment">
+        <textarea name="comment" id="comment"placeholder="댓글달기..."></textarea>
+      </div>
+      <div class="comment-btn">
+        <a href="#">게시</a>
+      </div>
+    </div>
+</body>
+</html>
