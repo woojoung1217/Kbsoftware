@@ -15,7 +15,6 @@ const backbtn = document.querySelector('.btn-back')
 backbtn.addEventListener('click',function(){
   gsap.to('#profile',.7, {
     display:'none',
-    opacity:.5,
   })
 })
 
