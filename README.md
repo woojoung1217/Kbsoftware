@@ -14,7 +14,7 @@
 사용자로 하여금 주변에 동물에(고양이,강아지,멸종위기종) 
 대한 사진+게시물 등 을 업로드 할 수 있게하여 지도 API 를 사용해 내 위치에서 가장 가까운 동물을 확인 할 수 있다.
 
-개발환경 : Html , css , Js , python , django , kakako api
+개발환경 : Html , css , Js , python , django , kakako 지도 api
 
 
 
