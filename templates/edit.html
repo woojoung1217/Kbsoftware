@@ -23,16 +23,13 @@
       </div>
      
         <div class="upload-btn">
-          <button href="" type = "submit"class="button-design">등록</button>
+          <button href="#" type = "submit"class="button-design">수정</button>
         </div>
       </header> 
 
       <section>
         <div class="insert-name">
-          <input type="text" placeholder="동물 이름" class="name-box" name="name">
-        </div>
-        <div class="map-select">
-          <a href="{% url 'location' %}"class="font-sz">위치 설정(필수)</a>
+          <input type="text" placeholder="동물 이름" class="name-box" name="name" value={{post.name}}></input>
         </div>
       </section>
 
@@ -49,16 +46,16 @@
         </div>
 
         <div class="text-control"> 
-          <input type="text" placeholder="내용을입력해주세요"class="content-text" name="body">
+          <input type="text" class="content-text" name="body"placeholder="내용을 입력해 주세요" value={{post.body}}></input>
         </div>
         <!-- 수정필요 -->
       </div>
 
       <div class="animaltype">
-        <input type="text" id="type" placeholder="동물 품종(?) 입력" name=" variety">
+        <input type="text" id="type" placeholder="동물 품종(?) 입력" value={{post.variety}}></input>
       </div>
       <div class="animaltype">
-        <input type="text" id="type" placeholder="#해시태그" name ="hashtag">
+        <input type="text" id="type" name ="hashtag" placeholder="# 해시태그" value={{post.hash_tag}}></input>
       </div>
  
       

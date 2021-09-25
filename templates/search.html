@@ -15,14 +15,14 @@
     <!-- 상단 검색 영역 시작 -->
     <div id="header">
       <div class="btn-area">
-        <a href="{% url 'main' %}">
-          <span>
-            <img id="leftArrow" src="{% static 'image/left-arrow.png' %}" alt="이전 페이지">
-          </span>
-        </a>
+        <span onclick="goBackPage()">
+          <img id="leftArrow" src="{% static 'image/left-arrow.png' %}" alt="이전 페이지">
+        </span>
       </div>
       <div class="input-area">
-        <input class="input-box-search" type="text" placeholder="검색어를 입력하세요.">
+        <form id="search-form" action="{% url 'result' %}" method="GET">
+          <input id="search-box" class="input-box-search" type="text" placeholder="검색어를 입력하세요." name="search" autofocus>
+        </form>
       </div>
     </div>
     <!-- 상단 검색 영역 끝 -->
@@ -60,14 +60,14 @@
       <div id="recentUpdateArea">
         <p class="top-title">최근 게시글</p>
         <div class="recent-update-content">
-          <!-- 최근 글 예시 시작 -->
+          <!-- 최근 글 반복문 시작 -->
           {% for post in posts %}
           <div class="recent-post">
             <div class="recent-post-profile-area">
               {% if post.image %}
-              <img class="profile-img" src="{{ post.image.url }}" alt="고양이">
+              <img class="profile-img" src="{{ post.image.url }}" alt="">
               {% else %}
-              <img class="profile-img" src="{% static 'image/cat.jpg' %}" alt="고양이">
+              <img class="profile-img" src="{% static 'image/cat.jpg' %}" alt="">
               {% endif %}
             </div>
             <div class="recent-post-left-area">
@@ -82,11 +82,11 @@
             </div>
             <div class="recent-post-right-area">
               <p class="location">{{ post.location }}</p>
-              <p class="writer">{{ post.name }} ></p>
+              <p class="writer">{{ post.name }}</p>
             </div>
           </div>
           {% endfor %}
-          <!-- 최근 글 예시 끝 -->
+          <!-- 최근 글 반복문 끝 -->
         </div>
       </div>
       <!-- 최근 글 끝 -->
@@ -94,5 +94,6 @@
 
   </div>
   <!-- 메인 컨테이너 끝 -->
+  <script src="{% static 'js/search.js' %}"></script>
 </body>
 </html>

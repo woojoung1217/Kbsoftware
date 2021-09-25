@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="{%static 'css/location.css' %}">
+  <script defer src="{%static 'js/location.js' %}"></script>
+  <title>location</title> 
+  </head>
+  <body>
+    <!-- <button type ="submit"onclick="history.back()"">선택완료</button> -->
+    <div id="map"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f3346db9637de84daa334492d7bf7369&libraries=services"></script>
+    <!-- <script>
+      var container = document.getElementById('map');
+      var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+      };
+      var map = new kakao.maps.Map(container, options);
+    </script> -->
+      <header>
+        <div class="text-box">
+          <h1>게시물을 올릴 위치를 선택해주세요</h1>
+        </div> 
+        <button type="submit" class="button-design"onclick="history.back()">선택완료</button>
+      </header>
+  </body> 

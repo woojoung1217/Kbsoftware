@@ -15,39 +15,143 @@
     <!-- 상단 검색 영역 시작 -->
     <div id="header">
       <div class="btn-area">
-        <a href="{% url 'main' %}">
-          <span>
-            <img id="leftArrow" src="{% static 'image/left-arrow.png' %}" alt="이전 페이지">
-          </span>
-        </a>
+        <span onclick="goBackPage()">
+          <img id="leftArrow" src="{% static 'image/left-arrow.png' %}" alt="이전 페이지">
+        </span>
       </div>
       <div class="input-area">
-        <input class="input-box-search" type="text" placeholder="검색어를 입력하세요.">
+        <form id="search-form" action="{% url 'search' %}" method="GET">
+          <input id="search-box" class="input-box-search" type="submit" name="search"></input>
+        </form>
       </div>
     </div>
     <!-- 상단 검색 영역 끝 -->
     <!-- 네비게이션 바 시작 -->
     <div id="nav">
-      <div class="nav-manu selected">
-          <p class="nav-manu-title">통합검색</p>
+      <div id="integrated" class="nav-manu selected-manu" onclick="openIntegratedTab()">
+          <p class="nav-manu-title selected-title">통합검색</p>
       </div>
-      <div class="nav-manu">
-        <p class="nav-manu-title">주소</p>
-      </div>
-      <div class="nav-manu">
-        <p class="nav-manu-title">동물종</p>
-      </div>
-      <div class="nav-manu">
+      <div id="name" class="nav-manu" onclick="openNameTab()">
         <p class="nav-manu-title">동물이름</p>
       </div>
-      <div class="nav-manu">
+      <div id="species" class="nav-manu" onclick="openSpeciesTab()">
+        <p class="nav-manu-title">동물종</p>
+      </div>
+      <div id="address" class="nav-manu" onclick="openAddressTab()">
+        <p class="nav-manu-title">주소</p>
+      </div>
+      <div id="author" class="nav-manu" onclick="openAuthorTab()">
         <p class="nav-manu-title">작성자</p>
       </div>
-      <div class="nav-manu">
+      <div id="hash-tag" class="nav-manu" onclick="openHashTagTab()">
         <p class="nav-manu-title">#태그</p>
       </div>
     </div>
     <!-- 네비게이션 바 끝 -->
+    <div id="mainContainer">
+      <!-- 통합검색 탭 시작 -->
+      <div id="integrated-tab">
+        <!-- 동물이름 컨테이너 시작 -->
+        <div class="result-container">
+          <div onclick="openNameTab()">
+            <p class="top-title">동물이름 ></p>
+          </div>
+          {% for post in names %}
+                <div class="recent-post">
+                  <div class="recent-post-profile-area">
+                    {% if post.image %}
+                    <img class="profile-img" src="{{ post.image.url }}" alt="">
+                    {% else %}
+                    <img class="profile-img" src="{% static 'image/cat.jpg' %}" alt="">
+                    {% endif %}
+                  </div>
+                  <div class="recent-post-left-area">
+                    <div class="recent-post-left-top-area">
+                      <p class="animal-name">{{ post.name }}</p>
+                      <p class="animal-border">|</p>
+                      <p class="animal-species">{{ post.species }}</p>
+                    </div>
+                    <div class="recent-post-left-bottom-area">
+                      <p class="hash-tag">{{ post.hash_tag }}</p>
+                    </div>
+                  </div>
+                  <div class="recent-post-right-area">
+                    <p class="location">{{ post.location }}</p>
+                    <p class="writer">{{ post.name }}</p>
+                  </div>
+                </div>
+          {% endfor %}
+        </div>
+        <!-- 동물이름 컨테이너 끝 -->
+        <!-- 동물종 컨테이너 시작 -->
+        <div class="result-container">
+          <div onclick="openSpeciesTab()">
+            <p class="top-title">동물종 ></p>
+          </div>
+          {% for post in species %}
+                <div class="recent-post">
+                  <div class="recent-post-profile-area">
+                    {% if post.image %}
+                    <img class="profile-img" src="{{ post.image.url }}" alt="">
+                    {% else %}
+                    <img class="profile-img" src="{% static 'image/cat.jpg' %}" alt="">
+                    {% endif %}
+                  </div>
+                  <div class="recent-post-left-area">
+                    <div class="recent-post-left-top-area">
+                      <p class="animal-name">{{ post.name }}</p>
+                      <p class="animal-border">|</p>
+                      <p class="animal-species">{{ post.species }}</p>
+                    </div>
+                    <div class="recent-post-left-bottom-area">
+                      <p class="hash-tag">{{ post.hash_tag }}</p>
+                    </div>
+                  </div>
+                  <div class="recent-post-right-area">
+                    <p class="location">{{ post.location }}</p>
+                    <p class="writer">{{ post.name }}</p>
+                  </div>
+                </div>
+          {% endfor %}
+        </div>
+        <!-- 동물종 컨테이너 끝 -->
+        <!-- 주소 컨테이너 시작 -->
+        <div class="result-container">
+          <div onclick="openAddressTab()">
+            <p class="top-title">주소 ></p>
+          </div>
+          {% for post in addresses %}
+                <div class="recent-post">
+                  <div class="recent-post-profile-area">
+                    {% if post.image %}
+                    <img class="profile-img" src="{{ post.image.url }}" alt="">
+                    {% else %}
+                    <img class="profile-img" src="{% static 'image/cat.jpg' %}" alt="">
+                    {% endif %}
+                  </div>
+                  <div class="recent-post-left-area">
+                    <div class="recent-post-left-top-area">
+                      <p class="animal-name">{{ post.name }}</p>
+                      <p class="animal-border">|</p>
+                      <p class="animal-species">{{ post.species }}</p>
+                    </div>
+                    <div class="recent-post-left-bottom-area">
+                      <p class="hash-tag">{{ post.hash_tag }}</p>
+                    </div>
+                  </div>
+                  <div class="recent-post-right-area">
+                    <p class="location">{{ post.location }}</p>
+                    <p class="writer">{{ post.name }}</p>
+                  </div>
+                </div>
+          {% endfor %}
+        </div>
+        <!-- 주소 컨테이너 끝 -->
+      </div>
+      <!-- 통합검색 탭 끝 -->
+      <div id="name-tab">
+
+      </div>
   </div>
   <!-- 메인 컨테이너 끝 -->
   <script src="{% static 'js/result.js' %}"></script>
